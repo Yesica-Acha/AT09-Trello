@@ -1,0 +1,6 @@
+/Trello/.gradle/*
+/Trello/.idea/*
+/Trello/build/*
+/Trello/gradle/wrapper/*
+/Trello/gradlew
+/Trello/gradlew.bat
