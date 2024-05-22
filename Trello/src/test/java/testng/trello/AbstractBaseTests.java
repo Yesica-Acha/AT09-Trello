@@ -1,4 +1,4 @@
-package trello;
+package testng.trello;
 
 import core.selenium.DriverManager;
 import org.openqa.selenium.WebDriver;

@@ -1,11 +1,10 @@
-package trello;
+package testng.trello;
 
 import core.Environment;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import trello.ui.pages.BoardPage;
 import trello.ui.pages.BoardsPage;
-import trello.ui.pages.CreateBoardPage;
 import trello.ui.pages.LoginPage;
 
 import java.util.List;

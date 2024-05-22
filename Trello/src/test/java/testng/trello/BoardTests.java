@@ -1,6 +1,5 @@
-package trello;
+package testng.trello;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import trello.ui.pages.*;
 

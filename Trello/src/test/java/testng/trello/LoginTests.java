@@ -1,4 +1,4 @@
-package trello;
+package testng.trello;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -27,6 +27,5 @@ public class LoginTests extends AbstractBaseTests  {
 
         Assert.assertTrue(accountMenuPage.isUserInfoDisplayed(userName), "The user name was not the expected.");
         Assert.assertTrue(accountMenuPage.isUserInfoDisplayed(userEmail), "The user email was not the expected.");
-        System.out.println("test");
     }
 }

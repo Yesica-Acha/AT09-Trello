@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import trello.ui.AbstractBasePage;
 
 public class LoginPage extends AbstractBasePage {
@@ -40,6 +41,7 @@ public class LoginPage extends AbstractBasePage {
     }
 
     public LoginPage clickLoginBtn() {
+        wait.until(ExpectedConditions.elementToBeClickable(continueLoginBtn));
         continueLoginBtn.click();
         return this;
     }
