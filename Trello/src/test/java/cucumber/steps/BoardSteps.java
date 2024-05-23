@@ -1,5 +1,6 @@
 package cucumber.steps;
 
+import core.selenium.SharedDriver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,8 +14,12 @@ import static org.testng.Assert.assertEquals;
 public class BoardSteps {
     BoardsPage boardsPage;
     CreateBoardPage createBoardPage;
-
     BoardPage boardPage;
+
+    public BoardSteps(final SharedDriver sharedDriver) {
+
+    }
+
     @When("I open Board Creation form from the top menu")
     public void openBoardCreationFormFromTheTopMenu() {
         boardsPage = new BoardsPage();

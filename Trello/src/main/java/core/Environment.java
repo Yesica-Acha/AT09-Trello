@@ -1,7 +1,7 @@
 package core;
 
 import com.jayway.jsonpath.DocumentContext;
-import core.helpers.JsonReader;
+import core.utils.JsonReader;
 
 public final class Environment {
 
@@ -9,7 +9,7 @@ public final class Environment {
 
     private final DocumentContext jsonContext;
     private Environment() {
-            jsonContext = JsonReader.getJsonObjet("config.json");
+            jsonContext = JsonReader.getJsonObjet("config/config.json");
     }
 
     public static Environment getInstance() {

@@ -1,0 +1,11 @@
+{
+  "admin": {
+    "email": "autotester248@gmail.com",
+    "password": "password"
+  },
+
+  "regular": {
+    "email": "autotester123@gmail.com",
+    "password": "password!"
+  }
+}

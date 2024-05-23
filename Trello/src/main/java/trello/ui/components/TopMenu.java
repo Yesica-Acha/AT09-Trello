@@ -14,8 +14,7 @@ public class TopMenu extends AbstractBasePage {
     By creteBtnBy = By.cssSelector("[data-testid*='create-menu']");
 
     public AccountMenuPage openAccountMenu() {
-        WebElement accountMenuBtn = driver.findElement(accountMenuBtnBy);
-        accountMenuBtn.click();
+        action.click(accountMenuBtnBy);
         return new AccountMenuPage();
     }
 
@@ -26,7 +25,7 @@ public class TopMenu extends AbstractBasePage {
     }
 
     public CreateMenuPage openCreateMenu() {
-        driver.findElement(creteBtnBy).click();
+        action.click(creteBtnBy);
         return new CreateMenuPage();
     }
 }

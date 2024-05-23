@@ -1,7 +1,5 @@
 package trello.ui.pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -17,6 +15,11 @@ public class LoginPage extends AbstractBasePage {
 
     @FindBy(id="login-submit")
     private WebElement continueLoginBtn;
+
+    public LoginPage() {
+        super();
+        driver.get("https://trello.com/login");
+    }
 
 
     public BoardsPage loginSuccessful(final String userEmail, final String password) {
@@ -41,20 +44,23 @@ public class LoginPage extends AbstractBasePage {
     }
 
     public LoginPage clickLoginBtn() {
-        wait.until(ExpectedConditions.elementToBeClickable(continueLoginBtn));
-        continueLoginBtn.click();
+        action.click(continueLoginBtn);
+//        wait.until(ExpectedConditions.elementToBeClickable(continueLoginBtn));
+//        continueLoginBtn.click();
         return this;
     }
 
     public LoginPage setPassword(String password) {
-        passwordTxtBox.clear();
-        passwordTxtBox.sendKeys(password);
+        action.setValue(passwordTxtBox, password);
+//        passwordTxtBox.clear();
+//        passwordTxtBox.sendKeys(password);
         return this;
     }
 
     public LoginPage setUserName(String userEmail) {
-        userNameTxtBox.clear();
-        userNameTxtBox.sendKeys(userEmail);
+        action.setValue(userNameTxtBox, userEmail);
+//        userNameTxtBox.clear();
+//        userNameTxtBox.sendKeys(userEmail);
         return this;
     }
 }

@@ -2,7 +2,8 @@
   Feature: Board
 
     Background:
-      Given I am logged in with valid user credentials
+      Given I am logged in with admin user credentials
+
 
     Scenario: Create Board from top menu
       When I open Board Creation form from the top menu

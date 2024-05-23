@@ -15,15 +15,19 @@ dependencies {
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.20.0'
     implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.8.0'
 
-    // https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path
+    // To handle Json files
     implementation group: 'com.jayway.jsonpath', name: 'json-path', version: '2.9.0'
-
-    // https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
     implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
 
     // Cucumber
     implementation group: 'io.cucumber', name: 'cucumber-java', version: '6.11.0'
     implementation group: 'io.cucumber', name: 'cucumber-testng', version: '6.11.0'
+
+    // Cucumber Reporting
+    implementation group: 'net.masterthought', name: 'cucumber-reporting', version: '5.5.3'
+
+    // Dependency Injection used for parallel execution
+    testImplementation group: 'io.cucumber', name: 'cucumber-picocontainer', version: '6.11.0'
 }
 
 test {

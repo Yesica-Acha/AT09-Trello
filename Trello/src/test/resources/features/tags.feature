@@ -1,15 +1,46 @@
 @Tags
-  Feature: Example for scenarios with tags
+Feature: Example for scenarios with tags
 
-    @First @Smoke
-    Scenario: This is the first scenario for tags
-      Given this is the first step
-      When this is the second step
-      Then this is the third step
+  @First @Smoke @CreateBoard
+  Scenario: This is the first example for tags (PASS)
+    Given this is the First step
+    When this is the Second step
+    Then this is the Third step
 
-    @Second @Regression @Fail
-    Scenario: This is the second scenario for tags
-      Given this is the first step
-      When this is the second step
-      Then this is the third step
-        And this step should fail
+  @Second @Regression @DeleteBoard
+  Scenario: This is the second example for tags (FAIL)
+    Given this is the First step
+    When this is the Second step
+    Then this is the Third step
+    And this step should fail
+    And this step should be skipped
+
+  @Third @Regression @Negative @Smoke
+  Scenario: This is the third example for tags (NOT IMPLEMENTED)
+    Given this is the First step
+    When this is the Second step
+    Then this is the Third step
+    And this step is not implemented
+
+  @Fourth @Smoke
+  Scenario: This is the fourth example for tags (PENDING)
+    Given this is the First step
+    When this is the Second step
+    Then this is the Third step
+    And this step is pending
+
+
+  Scenario Outline: This is the <case> scenario
+    Given this is the First step
+    When this is the Second step
+    Then this is the Third step
+
+    @Fast
+    Examples:
+      | case   |
+      | fourth |
+
+    @Low @Bug
+    Examples:
+      | case   |
+      | fifth  |
